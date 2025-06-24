@@ -1,0 +1,279 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\unity\\Gra na PW\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\carcontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\carcontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|h:\\unity\\gra na pw\\assets\\scripts\\clicksound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clicksound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|h:\\unity\\gra na pw\\assets\\scripts\\menumusiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumusiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\randomgameplaymusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\randomgameplaymusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\persistentmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\persistentmusic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\carselectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\carselectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\playercarloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercarloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\carselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\carselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\mapselectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapselectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\maploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\maploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\enginesound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enginesound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\trackmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\trackmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\enemydestroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemydestroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\enemycarmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemycarmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|H:\\unity\\Gra na PW\\assets\\scripts\\carspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC9465D4-B6CB-7184-4E77-2E81D5FD18A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\carspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClickSound.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\ClickSound.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ClickSound.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\ClickSound.cs",
+              "RelativeToolTip": "Assets\\scripts\\ClickSound.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T21:00:00.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuMusicController.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\MenuMusicController.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MenuMusicController.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\MenuMusicController.cs",
+              "RelativeToolTip": "Assets\\scripts\\MenuMusicController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T18:24:13.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PersistentMusic.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\PersistentMusic.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\PersistentMusic.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\PersistentMusic.cs",
+              "RelativeToolTip": "Assets\\scripts\\PersistentMusic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T17:40:23.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "uiManager.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\uiManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\uiManager.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\uiManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\uiManager.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T09:48:06.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CarSelectManager.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\CarSelectManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\CarSelectManager.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\CarSelectManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\CarSelectManager.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAkwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T21:22:57.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerCarLoader.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\PlayerCarLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\PlayerCarLoader.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\PlayerCarLoader.cs",
+              "RelativeToolTip": "Assets\\scripts\\PlayerCarLoader.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T21:27:01.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "carControler.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\carControler.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\carControler.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\carControler.cs",
+              "RelativeToolTip": "Assets\\scripts\\carControler.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwB8AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T09:48:25.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RandomGameplayMusic.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\RandomGameplayMusic.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\RandomGameplayMusic.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\RandomGameplayMusic.cs",
+              "RelativeToolTip": "Assets\\scripts\\RandomGameplayMusic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T18:04:59.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EnemyCarMove.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\EnemyCarMove.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\EnemyCarMove.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\EnemyCarMove.cs",
+              "RelativeToolTip": "Assets\\scripts\\EnemyCarMove.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T09:48:19.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CarSelector.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\CarSelector.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\CarSelector.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\CarSelector.cs",
+              "RelativeToolTip": "Assets\\scripts\\CarSelector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T22:00:19.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnemyDestroyer.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\EnemyDestroyer.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\EnemyDestroyer.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\EnemyDestroyer.cs",
+              "RelativeToolTip": "Assets\\scripts\\EnemyDestroyer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T09:48:15.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MapSelectManager.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\MapSelectManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MapSelectManager.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\MapSelectManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\MapSelectManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T21:22:13.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MapLoader.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\MapLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MapLoader.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\MapLoader.cs",
+              "RelativeToolTip": "Assets\\scripts\\MapLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T21:31:18.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "trackMove.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\trackMove.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\trackMove.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\trackMove.cs",
+              "RelativeToolTip": "Assets\\scripts\\trackMove.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T09:48:12.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EngineSound.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\EngineSound.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\EngineSound.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\EngineSound.cs",
+              "RelativeToolTip": "Assets\\scripts\\EngineSound.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T17:58:50.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "carSpawner.cs",
+              "DocumentMoniker": "H:\\unity\\Gra na PW\\Assets\\scripts\\carSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\carSpawner.cs",
+              "ToolTip": "H:\\unity\\Gra na PW\\Assets\\scripts\\carSpawner.cs",
+              "RelativeToolTip": "Assets\\scripts\\carSpawner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T09:48:22.641Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
