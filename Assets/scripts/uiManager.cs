@@ -9,13 +9,21 @@ public class uiManager : MonoBehaviour
 
     private int _score;
     private bool _gameOver;
-    
+    public Text gameOverScoreText; 
+    public Text highScoreText;     
+
 
     private void Start()
     {
         _score = 0;
         _gameOver = false;
         InvokeRepeating(nameof(UpdateScore), 1f, 0.5f);
+
+        if (highScoreText != null)
+        {
+            int highScore = PlayerPrefs.GetInt("HighScore", 0);
+            highScoreText.text = "Best: " + highScore;
+        }
     }
 
     private void Update()
@@ -36,11 +44,42 @@ public class uiManager : MonoBehaviour
     public void gameOverActivated()
     {
         _gameOver = true;
+
         foreach (var button in buttons)
         {
             button.gameObject.SetActive(true);
         }
+
+        
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        if (_score > highScore)
+        {
+            PlayerPrefs.SetInt("HighScore", _score);
+            PlayerPrefs.Save(); 
+        }
+
+       
+        if (gameOverScoreText != null)
+        {
+            gameOverScoreText.gameObject.SetActive(true);
+            gameOverScoreText.text = "Your Score: " + _score;
+
+            int savedHighScore = PlayerPrefs.GetInt("HighScore", 0);
+            gameOverScoreText.text += "\nRekord: " + savedHighScore;
+        }
+
+        if (highScoreText != null)
+        {
+            highScoreText.text = "Record: " + highScore;
+            highScoreText.gameObject.SetActive(true); // << KLUCZOWE!
+        }
+
+        if (scoreText != null)
+            scoreText.gameObject.SetActive(false);
+
     }
+
+
 
     public void play()
     {
@@ -79,6 +118,7 @@ public class uiManager : MonoBehaviour
         SceneManager.LoadScene("carSelectScene");
 
     }
+
 
 
    

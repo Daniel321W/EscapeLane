@@ -9,4 +9,10 @@ public class trackMove : MonoBehaviour
         Vector2 offset = new Vector2(0f, Time.time * speed);
         GetComponent<Renderer>().material.mainTextureOffset = offset;
     }
-}
+
+    
+   
+    }
+
+
+

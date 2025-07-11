@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 6828824041575696861}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0513, y: -5.7423, z: 0}
-  m_LocalScale: {x: 0.4473842, y: 0.3648429, z: 1}
+  m_LocalPosition: {x: 0.8882084, y: -1.7749146, z: 0}
+  m_LocalScale: {x: 0.4353501, y: 0.35302463, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,6 +108,9 @@ MonoBehaviour:
   carSpeed: 10
   maxPos: 2.1
   ui: {fileID: 0}
+  shieldVisual: {fileID: 0}
+  audioSource: {fileID: 0}
+  track: {fileID: 0}
 --- !u!50 &1044928178356331586
 Rigidbody2D:
   serializedVersion: 5
@@ -169,7 +172,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.01424861, y: 0.01698637}
+  m_Offset: {x: -0.07616216, y: -0.14931059}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -179,7 +182,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.4327855, y: 5.0794706}
+  m_Size: {x: 3.8341513, y: 8.959744}
   m_EdgeRadius: 0
 --- !u!82 &-6379822680255090960
 AudioSource:
@@ -194,7 +197,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: b13e400ec608bdf4c84f6ffcd3786746, type: 3}
   m_Resource: {fileID: 8300000, guid: b13e400ec608bdf4c84f6ffcd3786746, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.516
+  m_Volume: 0.522
   m_Pitch: 1
   Loop: 1
   Mute: 0

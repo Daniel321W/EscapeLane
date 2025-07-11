@@ -1,0 +1,8 @@
+H:/unity/Gra na PW/.utmp/RelWithDebInfo/311l3r3a/arm64-v8a/CMakeFiles/edit_cache.dir
+H:/unity/Gra na PW/.utmp/RelWithDebInfo/311l3r3a/arm64-v8a/CMakeFiles/rebuild_cache.dir
+H:/unity/Gra na PW/.utmp/RelWithDebInfo/311l3r3a/arm64-v8a/GameActivity/CMakeFiles/game.dir
+H:/unity/Gra na PW/.utmp/RelWithDebInfo/311l3r3a/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+H:/unity/Gra na PW/.utmp/RelWithDebInfo/311l3r3a/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+H:/unity/Gra na PW/.utmp/RelWithDebInfo/311l3r3a/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+H:/unity/Gra na PW/.utmp/RelWithDebInfo/311l3r3a/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+H:/unity/Gra na PW/.utmp/RelWithDebInfo/311l3r3a/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

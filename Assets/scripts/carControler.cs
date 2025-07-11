@@ -13,22 +13,20 @@ public class carControler : MonoBehaviour
     private bool moveLeft;
     private bool moveRight;
 
-
-
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
+    private PowerUpManager powerUpManager; // Dodajemy PowerUpManager
 
     private void Start()
     {
         _position = transform.position;
-       
+        rb = GetComponent<Rigidbody2D>();
+        powerUpManager = GetComponent<PowerUpManager>(); // Pobieramy PowerUpManager
     }
-
-    
 
     private void Update()
     {
         _position = transform.position;
-        rb = GetComponent<Rigidbody2D>();
+
         float moveX = 0f;
 
         if (moveLeft)
@@ -37,23 +35,28 @@ public class carControler : MonoBehaviour
             moveX = carSpeed * Time.deltaTime;
         else
             moveX = Input.GetAxis("Horizontal") * carSpeed * Time.deltaTime;
-        
-
-
 
         _position.x += moveX;
         _position.x = Mathf.Clamp(_position.x, -maxPos, maxPos);
         transform.position = _position;
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
         if (collision.gameObject.CompareTag("EnemyCar"))
         {
-            Destroy(gameObject);
-            ui.gameOverActivated();
+            if (powerUpManager != null && powerUpManager.IsImmortal())
+            {
+                // Gracz jest nieśmiertelny – niszczymy wroga
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                // Gracz ginie
+                Destroy(gameObject);
+                if (ui != null)
+                    ui.gameOverActivated();
+            }
         }
     }
 
@@ -77,11 +80,8 @@ public class carControler : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
     }
 
-
     public void SetVelocityZero()
     {
         rb.linearVelocity = Vector2.zero;
     }
-
-
 }

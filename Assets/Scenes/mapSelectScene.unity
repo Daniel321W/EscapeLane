@@ -289,8 +289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0015182, y: 0.00090027}
-  m_SizeDelta: {x: 491.43, y: 447.99}
+  m_AnchoredPosition: {x: 0.000067711, y: 11.3035}
+  m_SizeDelta: {x: 416.25, y: 420.6031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556926526
 MonoBehaviour:
@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 693783212}
   - component: {fileID: 693783214}
   - component: {fileID: 693783213}
+  - component: {fileID: 693783215}
   m_Layer: 5
   m_Name: l1
   m_TagString: Untagged
@@ -362,10 +363,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1367075024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0012894}
-  m_SizeDelta: {x: 475, y: 447.99}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &693783213
 MonoBehaviour:
@@ -405,6 +406,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693783211}
   m_CullTransparentMesh: 1
+--- !u!114 &693783215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693783211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 4
+  m_AspectRatio: 1
 --- !u!1 &999096928
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,12 +468,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -621,6 +636,8 @@ MonoBehaviour:
   - {fileID: 1367075025}
   - {fileID: 1236215379}
   scoreText: {fileID: 0}
+  gameOverScoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
 --- !u!4 &1117493566
 Transform:
   m_ObjectHideFlags: 0
@@ -672,8 +689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 267, y: 397}
-  m_SizeDelta: {x: 491.43, y: 447.99}
+  m_AnchoredPosition: {x: 247, y: 383.98}
+  m_SizeDelta: {x: 416.25, y: 397.9958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1236215379
 MonoBehaviour:
@@ -817,8 +834,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -283, y: 393}
-  m_SizeDelta: {x: 475, y: 447.9875}
+  m_AnchoredPosition: {x: -233, y: 397}
+  m_SizeDelta: {x: 416.2533, y: 371.9622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367075025
 MonoBehaviour:

@@ -24,6 +24,8 @@ UserSettings/
 *.mdb
 *.opendb
 *.VC.db
+.vs/
+
 
 # ========== OS-SPECIFIC ==========
 .DS_Store

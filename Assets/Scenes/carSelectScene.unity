@@ -946,6 +946,7 @@ MonoBehaviour:
   carNameImage: {fileID: 1409571942}
   buttonLeft: {fileID: 842710372}
   buttonRight: {fileID: 541238688}
+  screenHeightRatio: 0.3
 --- !u!4 &667098997
 Transform:
   m_ObjectHideFlags: 0
@@ -1312,21 +1313,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &840558866
-Transform:
+--- !u!224 &840558866
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840558864}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -540.1197, y: -963.37, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.37832272, y: 0.37913045, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 667098997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -540.1321, y: -963.4788}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &842710370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002225356}
   - component: {fileID: 1002225355}
+  - component: {fileID: 1002225357}
   m_Layer: 0
   m_Name: background_0
   m_TagString: Untagged
@@ -1541,12 +1547,24 @@ Transform:
   m_GameObject: {fileID: 1002225354}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0744, y: 0.0585, z: 0}
-  m_LocalScale: {x: 0.5684848, y: 0.6640582, z: 1}
+  m_LocalPosition: {x: -0.6255, y: -0.0152, z: 0}
+  m_LocalScale: {x: 0.63804877, y: 0.65035987, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1002225357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002225354}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980714eb543772c459f8f406f384dfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1409571939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,7 +1800,7 @@ Transform:
   m_GameObject: {fileID: 1647446919}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -540.1321, y: -963.4788, z: 0}
+  m_LocalPosition: {x: -540.02, y: -963.4788, z: 0}
   m_LocalScale: {x: 1.0633105, y: 1.1065727, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1887,10 +1905,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
