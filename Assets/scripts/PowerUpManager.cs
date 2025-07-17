@@ -3,18 +3,22 @@ using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
 {
-    public GameObject shieldVisual;      // Normalny GameObject z grafiką tarczy (sprite, animacja, itp.)
-    public AudioClip powerUpSound;       // Normalny plik audio (mp3/wav)
-    public AudioSource audioSource;      // AudioSource z Unity (może być przypięty do gracza)
-    public trackMove track;              // Skrypt od tła
+    public enum PowerUpType
+    {
+        Shield,
+        Attack
+    }
+
+    public GameObject shieldVisual;
+    public AudioClip powerUpSound;
+    public AudioSource audioSource;
+    public trackMove track;
     public float powerUpDuration = 5f;
 
-    private bool isImmortal = false;
+    private carControler carController;
     private float originalCarSpeed;
     private float originalTrackSpeed;
-    private float enemySpeedMultiplier = 1.5f;
-
-    private carControler carController;
+    private bool isImmortal = false;
 
     private void Start()
     {
@@ -22,52 +26,59 @@ public class PowerUpManager : MonoBehaviour
         originalCarSpeed = carController.carSpeed;
 
         if (track == null)
-            track = FindObjectOfType<trackMove>(); // <- SZUKA TRACK NA SCENIE
+            track = FindObjectOfType<trackMove>();
 
         if (track != null)
             originalTrackSpeed = track.speed;
     }
 
-    public void ActivatePowerUp()
+    public void ActivatePowerUp(PowerUpType type)
     {
-        StartCoroutine(PowerUpRoutine());
+        StartCoroutine(PowerUpRoutine(type));
     }
 
-    private IEnumerator PowerUpRoutine()
+    private IEnumerator PowerUpRoutine(PowerUpType type)
     {
-        isImmortal = true;
-
-        if (shieldVisual != null)
-            shieldVisual.SetActive(true);
+        if (type == PowerUpType.Shield)
+        {
+            isImmortal = true;
+            if (shieldVisual != null)
+                shieldVisual.SetActive(true);
+        }
 
         if (audioSource != null && powerUpSound != null)
             audioSource.PlayOneShot(powerUpSound);
 
-        // Boost prędkości
         carController.carSpeed *= 1.5f;
-
         if (track != null)
             track.speed *= 1.5f;
 
-        // Zwiększ prędkość wszystkich istniejących przeciwników
         EnemyCarMove[] enemies = FindObjectsOfType<EnemyCarMove>();
-        foreach (EnemyCarMove enemy in enemies)
-            enemy.speed *= enemySpeedMultiplier;
+
+        if (type == PowerUpType.Attack)
+        {
+            foreach (EnemyCarMove enemy in enemies)
+                enemy.SetEscapeMode(true);
+        }
 
         yield return new WaitForSeconds(powerUpDuration);
 
-        isImmortal = false;
-
-        if (shieldVisual != null)
-            shieldVisual.SetActive(false);
+        if (type == PowerUpType.Shield)
+        {
+            isImmortal = false;
+            if (shieldVisual != null)
+                shieldVisual.SetActive(false);
+        }
 
         carController.carSpeed = originalCarSpeed;
-
         if (track != null)
             track.speed = originalTrackSpeed;
 
-        foreach (EnemyCarMove enemy in enemies)
-            enemy.speed /= enemySpeedMultiplier;
+        if (type == PowerUpType.Attack)
+        {
+            foreach (EnemyCarMove enemy in enemies)
+                enemy.SetEscapeMode(false);
+        }
     }
 
     public bool IsImmortal()

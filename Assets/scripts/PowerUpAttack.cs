@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using static PowerUpManager;
 
-public class PowerUpShield : MonoBehaviour
+public class PowerUpAttack : MonoBehaviour
 {
     public float speed = 8f;
 
@@ -16,7 +16,7 @@ public class PowerUpShield : MonoBehaviour
         {
             PowerUpManager manager = other.GetComponent<PowerUpManager>();
             if (manager != null)
-                manager.ActivatePowerUp(PowerUpType.Shield);
+                manager.ActivatePowerUp(PowerUpType.Attack);
 
             Destroy(gameObject);
         }
