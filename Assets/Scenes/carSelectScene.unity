@@ -275,8 +275,8 @@ Transform:
   m_GameObject: {fileID: 220088135}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -539.92, y: -963.53, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -539.9791, y: -963.599, z: 0}
+  m_LocalScale: {x: 0.8486799, y: 0.9092967, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 667098997}
@@ -939,10 +939,12 @@ MonoBehaviour:
   - {fileID: 840558864}
   - {fileID: 220088135}
   - {fileID: 1647446919}
+  - {fileID: 1260945185}
   carNameSprites:
   - {fileID: 356007136749054513, guid: 104aa7e7add7cd848b0e359c4e29107b, type: 3}
   - {fileID: -5980189213638693195, guid: ca81885438af3724fbdf6b12fef60a20, type: 3}
   - {fileID: -6876036068597779951, guid: 4cd5e012b1bd0994387a3d7a82880718, type: 3}
+  - {fileID: -9054167748607579948, guid: 8da4e1889bbdfb742a3095b144358337, type: 3}
   carNameImage: {fileID: 1409571942}
   buttonLeft: {fileID: 842710372}
   buttonRight: {fileID: 541238688}
@@ -963,6 +965,7 @@ Transform:
   - {fileID: 840558866}
   - {fileID: 220088137}
   - {fileID: 1647446921}
+  - {fileID: 1260945187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &678729494
@@ -1139,7 +1142,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e67a71ebea3e01c4f9f11a2086a7dcc4, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e67a71ebea3e01c4f9f11a2086a7dcc4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1565,6 +1568,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980714eb543772c459f8f406f384dfaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1260945185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260945187}
+  - component: {fileID: 1260945186}
+  m_Layer: 0
+  m_Name: car40_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!212 &1260945186
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260945185}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -8556453643517459808, guid: a96a20c5d1dd8b945a90c212127cfb65, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.82, y: 1.86}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1260945187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260945185}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -539.98, y: -963.5757, z: 0}
+  m_LocalScale: {x: 0.89772576, y: 0.8143302, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667098997}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1409571939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,8 +1890,8 @@ Transform:
   m_GameObject: {fileID: 1647446919}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -540.02, y: -963.4788, z: 0}
-  m_LocalScale: {x: 1.0633105, y: 1.1065727, z: 1}
+  m_LocalPosition: {x: -540.0565, y: -963.5941, z: 0}
+  m_LocalScale: {x: 0.9312548, y: 0.92789245, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 667098997}
@@ -1854,6 +1944,7 @@ MonoBehaviour:
   - {fileID: 1212141534709957087, guid: 302d3817f8e6cb4429c6f8f35468d397, type: 3}
   - {fileID: 6828824041575696861, guid: 77328467e40a2ed44a8d63239d3d5b8b, type: 3}
   - {fileID: 7941058687305707503, guid: ec8bacd9580e0d847826d88645fe682e, type: 3}
+  - {fileID: 8490117014262530268, guid: d24e129906e8f674ea59996b4bd150bd, type: 3}
   leftButton: {fileID: 842710372}
   rightButton: {fileID: 541238688}
   startButton: {fileID: 678729496}

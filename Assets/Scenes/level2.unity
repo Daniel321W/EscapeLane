@@ -1369,6 +1369,7 @@ MonoBehaviour:
   - {fileID: 1212141534709957087, guid: 302d3817f8e6cb4429c6f8f35468d397, type: 3}
   - {fileID: 6828824041575696861, guid: 77328467e40a2ed44a8d63239d3d5b8b, type: 3}
   - {fileID: 7941058687305707503, guid: ec8bacd9580e0d847826d88645fe682e, type: 3}
+  - {fileID: 8490117014262530268, guid: d24e129906e8f674ea59996b4bd150bd, type: 3}
   spawnPosition: {x: 0, y: -6.21, z: 0}
   ui: {fileID: 1119315982}
   leftTrigger: {fileID: 409997970}

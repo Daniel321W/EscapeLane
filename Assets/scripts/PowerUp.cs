@@ -20,5 +20,5 @@ public class PowerUpShield : MonoBehaviour
 
             Destroy(gameObject);
         }
-    }
+    }//refactor
 }
