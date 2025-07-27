@@ -95,6 +95,11 @@ public float scoreMultiplier = 1f;
         SceneManager.LoadScene("level2");
     }
 
+     public void play2()
+    {
+        SceneManager.LoadScene("level3");
+    }
+
     public void selectmap()
     {
         SceneManager.LoadScene("mapSelectScene");
