@@ -9,7 +9,7 @@ public class PowerUpAttack : MonoBehaviour
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime, Space.World);
     }
-
+//refactor
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

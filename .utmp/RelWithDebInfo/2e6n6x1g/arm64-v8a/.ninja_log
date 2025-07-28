@@ -1,0 +1,12 @@
+# ninja log v5
+20	3218	7753589433267028	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	c80900ce68123da2
+35	3259	7753589433267028	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3c39fdae5dc8db30
+14	3290	7753589433943070	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f2dee1ba7dbb0f4c
+1	3302	7753589433555446	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	7801cb9e167ca5f8
+27	3767	7753589438792562	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	6cffb02c0e565f55
+3290	3870	7753589439818201	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	ae37fc4a8841f828
+8	3979	7753589440958829	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b1805794a3133e36
+3871	4163	7753589442844619	C:/Users/i5 6Gen/Documents/Projekt/Escape-Lane-main/My project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2e6n6x1g/obj/arm64-v8a/libswappywrapper.so	294193cc1441faeb
+3231	4949	7753589450785668	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c9f38e790a5a6243
+3259	5392	7753589455244434	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	6e7a7988faf46648
+5393	5555	7753589456886262	C:/Users/i5 6Gen/Documents/Projekt/Escape-Lane-main/My project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2e6n6x1g/obj/arm64-v8a/libgame.so	e775cbf7e699ee27

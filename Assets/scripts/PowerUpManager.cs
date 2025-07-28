@@ -6,7 +6,8 @@ public class PowerUpManager : MonoBehaviour
     public enum PowerUpType
     {
         Shield,
-        Attack
+        Attack,
+        DoublePoints 
     }
 
     public GameObject shieldVisual;
@@ -15,22 +16,30 @@ public class PowerUpManager : MonoBehaviour
     public trackMove track;
     public float powerUpDuration = 5f;
 
+    public uiManager ui;  // <- przypnij z Unity do UI managera
+private float originalScoreRate = 1f;
+
+
     private carControler carController;
     private float originalCarSpeed;
     private float originalTrackSpeed;
     private bool isImmortal = false;
 
-    private void Start()
-    {
-        carController = GetComponent<carControler>();
-        originalCarSpeed = carController.carSpeed;
+  private void Start()
+{
+    carController = GetComponent<carControler>();
+    originalCarSpeed = carController.carSpeed;
 
-        if (track == null)
-            track = FindObjectOfType<trackMove>();
+    if (track == null)
+        track = FindObjectOfType<trackMove>();
 
-        if (track != null)
-            originalTrackSpeed = track.speed;
-    }
+    if (track != null)
+        originalTrackSpeed = track.speed;
+
+    if (ui == null)
+        ui = FindObjectOfType<uiManager>();
+}
+
 
     public void ActivatePowerUp(PowerUpType type)
     {
@@ -61,7 +70,19 @@ public class PowerUpManager : MonoBehaviour
                 enemy.SetEscapeMode(true);
         }
 
+        if (type == PowerUpType.DoublePoints && ui != null)
+{
+    originalScoreRate = ui.scoreMultiplier;
+    ui.scoreMultiplier = originalScoreRate * 4f;
+}
+
         yield return new WaitForSeconds(powerUpDuration);
+
+        if (type == PowerUpType.DoublePoints && ui != null)
+{
+    ui.scoreMultiplier = originalScoreRate;
+}
+
 
         if (type == PowerUpType.Shield)
         {

@@ -11,6 +11,9 @@ public class uiManager : MonoBehaviour
     private bool _gameOver;
     public Text gameOverScoreText; 
     public Text highScoreText;     
+    [HideInInspector]
+public float scoreMultiplier = 1f;
+
 
 
     private void Start()
@@ -34,12 +37,13 @@ public class uiManager : MonoBehaviour
 
 
     private void UpdateScore()
+{
+    if (!_gameOver)
     {
-        if (!_gameOver)
-        {
-            _score++;
-        }
+        _score += Mathf.RoundToInt(1 * scoreMultiplier);
     }
+}
+
 
     public void gameOverActivated()
     {
@@ -89,6 +93,11 @@ public class uiManager : MonoBehaviour
     public void play1()
     {
         SceneManager.LoadScene("level2");
+    }
+
+     public void play2()
+    {
+        SceneManager.LoadScene("level3");
     }
 
     public void selectmap()

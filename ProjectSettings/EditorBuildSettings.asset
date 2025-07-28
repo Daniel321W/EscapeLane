@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 5223709db02692a47a0e492c508b96d7
   - enabled: 1
     path: Assets/Scenes/carSelectScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    guid: e4a592445f2c767428386ed314480a2c
   - enabled: 1
     path: Assets/Scenes/mapSelectScene.unity
     guid: 89870ba5cd220114b9ce719e81fcf6f1
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level2.unity
     guid: b4e09883c136615479880c5140faf16d
+  - enabled: 1
+    path: Assets/Scenes/level3.unity
+    guid: 4b90634844719ea4385bd202b7afc118
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
