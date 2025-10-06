@@ -387,7 +387,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2433a4d47b58e47459934d306f016150, type: 2}
+  - {fileID: 2100000, guid: ee14c046ff2aeb44095833dad2e629d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1272,7 +1272,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1119315982}
         m_TargetAssemblyTypeName: uiManager, Assembly-CSharp
-        m_MethodName: play
+        m_MethodName: play2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
