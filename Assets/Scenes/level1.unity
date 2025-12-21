@@ -2894,15 +2894,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22dbe6b1c18bef0489aeb3052ca04956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cars:
-  - {fileID: 1328983777143869654, guid: 0462515cf0da2c84bb90fac34c756109, type: 3}
+  carPrefabs:
   - {fileID: 2921117037126414556, guid: 4c9f6b758943a5a4a820cb36ef012116, type: 3}
-  - {fileID: 2722810039919102213, guid: c5f7498edd9c30545b3d88cd015a7a9e, type: 3}
-  - {fileID: 5375540014710131776, guid: 53af6ecce9448224c8146aa8ac0e0e99, type: 3}
-  - {fileID: 5399077278270575462, guid: 8c3d629ccfbfb904281a8e783639e6e5, type: 3}
   - {fileID: 1044731406576395563, guid: e4e99064b21b8db4aa056e11470540cf, type: 3}
+  - {fileID: 3292841111928913087, guid: 9347b34c92ba1ba44a8f6aa59c5d8b84, type: 3}
+  - {fileID: 3176376784700635103, guid: 58eb934237824404cac1068f51a02fbc, type: 3}
+  - {fileID: 6846195448685518166, guid: 3480487a4683bb0498959fe33829fd17, type: 3}
+  - {fileID: 4476491478792285641, guid: b3542c665f6ad804296e659ae9e6cc32, type: 3}
+  - {fileID: 5399077278270575462, guid: 8c3d629ccfbfb904281a8e783639e6e5, type: 3}
+  - {fileID: 5375540014710131776, guid: 53af6ecce9448224c8146aa8ac0e0e99, type: 3}
+  - {fileID: 2722810039919102213, guid: c5f7498edd9c30545b3d88cd015a7a9e, type: 3}
   maxPos: 2.1
   delayTimer: 1
+  poolSize: 10
 --- !u!4 &1791525206
 Transform:
   m_ObjectHideFlags: 0

@@ -6,7 +6,17 @@ public class EnemyDestroyer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EnemyCar"))
         {
-            Destroy(collision.gameObject);
+            
+            collision.gameObject.SetActive(false);
+        }
+    }
+    
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemyCar"))
+        {
+            collision.gameObject.SetActive(false);
         }
     }
 }

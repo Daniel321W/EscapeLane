@@ -14,13 +14,13 @@ public class carControler : MonoBehaviour
     private bool moveRight;
 
     private Rigidbody2D rb;
-    private PowerUpManager powerUpManager; // Dodajemy PowerUpManager
+    private PowerUpManager powerUpManager;
 
     private void Start()
     {
         _position = transform.position;
         rb = GetComponent<Rigidbody2D>();
-        powerUpManager = GetComponent<PowerUpManager>(); // Pobieramy PowerUpManager
+        powerUpManager = GetComponent<PowerUpManager>();
     }
 
     private void Update()
@@ -47,12 +47,12 @@ public class carControler : MonoBehaviour
         {
             if (powerUpManager != null && powerUpManager.IsImmortal())
             {
-                // Gracz jest nieśmiertelny – niszczymy wroga
-                Destroy(collision.gameObject);
+                
+                collision.gameObject.SetActive(false);
             }
             else
             {
-                // Gracz ginie
+                
                 Destroy(gameObject);
                 if (ui != null)
                     ui.gameOverActivated();
@@ -70,18 +70,20 @@ public class carControler : MonoBehaviour
 
     public void PressRightDown()
     {
-        if (rb == null) rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocity = new Vector2(carSpeed, 0);
+        
+        if (rb != null) 
+            rb.linearVelocity = new Vector2(carSpeed, 0);
     }
 
     public void PressRightUp()
     {
-        if (rb == null) rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocity = Vector2.zero;
+        if (rb != null) 
+            rb.linearVelocity = Vector2.zero;
     }
 
     public void SetVelocityZero()
     {
-        rb.linearVelocity = Vector2.zero;
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
     }
 }
