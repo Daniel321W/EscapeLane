@@ -207,9 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183fab233b7df004f90d1aff04384783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons: []
   carSpeed: 10
   maxPos: 2.1
+  buttons: []
   ui: {fileID: 0}
 --- !u!50 &3744546598865617256
 Rigidbody2D:
