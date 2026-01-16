@@ -75,7 +75,7 @@ public float scoreMultiplier = 1f;
         if (highScoreText != null)
         {
             highScoreText.text = "Record: " + highScore;
-            highScoreText.gameObject.SetActive(true); // << KLUCZOWE!
+            highScoreText.gameObject.SetActive(true); 
         }
 
         if (scoreText != null)
