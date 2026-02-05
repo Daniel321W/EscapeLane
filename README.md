@@ -6,10 +6,15 @@
 
 ## 📸 Screeny z Gry
 
-| Garaż - Coupe | Wybór Mapy | Gameplay | Koniec Gry |
+### 🏎️ Garaż i wybór pojazdów
+| Garaż - Coupe | Garaż - 1967 | Garaż - La Italia | Garaż - Solaris |
 | :---: | :---: | :---: | :---: |
-| <img src="Screenshots/ss1.PNG" width="200"> | <img src="Screenshots/ss5.PNG" width="200"> | <img src="Screenshots/ss6.PNG" width="200"> | <img src="Screenshots/s12.PNG" width="200"> |
+| <img src="Screenshots/ss1.PNG" width="200"> | <img src="Screenshots/ss2.PNG" width="200"> | <img src="Screenshots/ss3.PNG" width="200"> | <img src="Screenshots/ss4.PNG" width="200"> |
 
+### 🎮 Gameplay i Mechaniki
+| Wybór Mapy | Night City | System Power-upów | Interfejs Gameover |
+| :---: | :---: | :---: | :---: |
+| <img src="Screenshots/ss5.PNG" width="200"> | <img src="Screenshots/ss6.PNG" width="200"> | <img src="Screenshots/ss8.PNG" width="200"> | <img src="Screenshots/s12.PNG" width="200"> |
 ---
 
 ## 🚀 O Projekcie
