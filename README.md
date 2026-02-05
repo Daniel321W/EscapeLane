@@ -40,4 +40,4 @@ Możesz przetestować grę bezpośrednio na swoim telefonie z Androidem:
 
 ---
 
-**Daniel321W** | [LinkedIn](www.linkedin.com/in/daniel-kozak-4a9733289) | [GitHub](https://github.com/Daniel321W)
+**Daniel321W** | [LinkedIn](https://www.linkedin.com/in/daniel-kozak-4a9733289) | [GitHub](https://github.com/Daniel321W)
