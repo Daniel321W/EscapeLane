@@ -6,10 +6,10 @@
 
 ## 📸 Screeny z Gry
 <p align="center">
-  <img src="Screenshots/ss1.jpg" width="200" title="Garaż - Coupe">
-  <img src="Screenshots/ss5.jpg" width="200" title="Wybór Mapy">
-  <img src="Screenshots/ss6.jpg" width="200" title="Gameplay Night City">
-  <img src="Screenshots/s12.jpg" width="200" title="Menu Koniec Gry">
+  <img src="Screenshots/ss1.png" width="200" title="Garaż - Coupe">
+  <img src="Screenshots/ss5.png" width="200" title="Wybór Mapy">
+  <img src="Screenshots/ss6.png" width="200" title="Gameplay Night City">
+  <img src="Screenshots/s12.png" width="200" title="Menu Koniec Gry">
 </p>
 
 ---
