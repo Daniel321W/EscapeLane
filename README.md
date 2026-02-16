@@ -36,8 +36,8 @@ W projekcie skupiłem się na czystości kodu i wydajności mobilnej:
 
 ## 📥 Pobierz i Przetestuj
 Możesz przetestować grę bezpośrednio na swoim telefonie z Androidem:
-👉 **[Pobierz plik .apk z sekcji Releases](link)**
+👉 **[Pobierz plik .apk z sekcji Releases](https://github.com/Daniel321W/Escape-Lane/releases/download/1.0/Escape.Lane.apk)**
 
 ---
 
-**Daniel321W** | [LinkedIn](link) | [GitHub](link)
+**Daniel321W** | [LinkedIn](https://www.linkedin.com/in/daniel-kozak-4a9733289) | [GitHub](https://github.com/Daniel321W)
