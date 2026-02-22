@@ -158,7 +158,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b7aec2b414e86cb4e9356c9405406324, type: 3}
     m_FontSize: 39
     m_FontStyle: 0
     m_BestFit: 0
@@ -1558,7 +1558,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b7aec2b414e86cb4e9356c9405406324, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -1876,7 +1876,7 @@ Transform:
   m_GameObject: {fileID: 957255325}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -456.92, y: -2085.86, z: 0}
+  m_LocalPosition: {x: -456.917, y: -2085.885, z: 0}
   m_LocalScale: {x: 0.07525551, y: 0.07472109, z: 0.8944272}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1995,7 +1995,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b7aec2b414e86cb4e9356c9405406324, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -2831,8 +2831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameplayTracks:
-  - {fileID: 8300000, guid: 48962e6deda5cc043a9ea3b487b8797b, type: 3}
-  - {fileID: 8300000, guid: d0541ab912230cc4cb72ce9021715464, type: 3}
+  - {fileID: 8300000, guid: 5668a81088d6abd4e990e4c934796e4c, type: 3}
+  - {fileID: 8300000, guid: 8faff206644fb1e4bbd9407482c23996, type: 3}
 --- !u!82 &1703984290
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2844,7 +2844,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: d0541ab912230cc4cb72ce9021715464, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8faff206644fb1e4bbd9407482c23996, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2941,7 +2941,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 48962e6deda5cc043a9ea3b487b8797b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5668a81088d6abd4e990e4c934796e4c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
