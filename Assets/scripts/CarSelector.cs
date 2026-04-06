@@ -9,14 +9,16 @@ public class CarSelector : MonoBehaviour
     public Button buttonLeft;
     public Button buttonRight;
 
+    // NOWE: Połączenie z naszym systemem sklepu
+    public TuningManager tuningManager; 
+
     private int currentIndex = 0;
 
     [Header("Auto Scaling Settings")]
-    [Range(0.1f, 1f)] public float screenHeightRatio = 0.3f; // Auto zajmie np. 30% wysokości ekranu
+    [Range(0.1f, 1f)] public float screenHeightRatio = 0.3f; 
 
     private void Start()
     {
-        // 🔧 Skalowanie wszystkich aut przed pokazaniem jednego z nich
         foreach (GameObject car in cars)
         {
             ScaleCarToScreen(car);
@@ -42,9 +44,14 @@ public class CarSelector : MonoBehaviour
             carNameImage.sprite = carNameSprites[index];
         }
 
-        // Zablokuj przyciski na skrajnych pozycjach
         buttonLeft.interactable = (index > 0);
         buttonRight.interactable = (index < cars.Length - 1);
+
+        // NOWE: Informujemy sklep, że zmieniliśmy auto i przekazujemy mu obiekt nowego auta
+        if (tuningManager != null)
+        {
+            tuningManager.OnCarChanged(index, cars[index]);
+        }
     }
 
     private void ScaleCarToScreen(GameObject carObject)
@@ -63,7 +70,7 @@ public class CarSelector : MonoBehaviour
 
         float scale = Mathf.Min(maxWidth / spriteWidth, maxHeight / spriteHeight);
 
-        scale *= 1.1f; // 🔥 Tu zwiększasz wielkość auta
+        scale *= 1.1f; 
 
         carObject.transform.localScale = new Vector3(scale, scale, 1f);
     }

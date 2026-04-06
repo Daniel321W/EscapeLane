@@ -2833,6 +2833,8 @@ MonoBehaviour:
   gameplayTracks:
   - {fileID: 8300000, guid: 5668a81088d6abd4e990e4c934796e4c, type: 3}
   - {fileID: 8300000, guid: 8faff206644fb1e4bbd9407482c23996, type: 3}
+  - {fileID: 8300000, guid: b27935e9841230a4a86fba1e3a49faff, type: 3}
+  - {fileID: 8300000, guid: d8bcd988bad9eae4da306c862aa5abcd, type: 3}
 --- !u!82 &1703984290
 AudioSource:
   m_ObjectHideFlags: 0

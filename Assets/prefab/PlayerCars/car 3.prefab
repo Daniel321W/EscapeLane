@@ -117,13 +117,14 @@ GameObject:
   - component: {fileID: 2757262757992367487}
   - component: {fileID: 7052149127314891474}
   - component: {fileID: 8535019279528273598}
+  - component: {fileID: 4915692578018346737}
   m_Layer: 0
   m_Name: car 3
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1926309045303971718
 Transform:
   m_ObjectHideFlags: 0
@@ -411,3 +412,19 @@ MonoBehaviour:
   track: {fileID: 0}
   powerUpDuration: 5
   ui: {fileID: 0}
+--- !u!114 &4915692578018346737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7941058687305707503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adee31b0e3a822649b55503130ac5131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topSpoilerPoint: {fileID: 0}
+  allTuningParts:
+  - {fileID: 11400000, guid: c673da01857638144b1648a39ad625eb, type: 2}
+  - {fileID: 11400000, guid: 82bf9f321bba2ad40b1585a48d755936, type: 2}
