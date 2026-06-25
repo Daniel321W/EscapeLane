@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e50c441bbd1fc844b871f9a51daf420, type: 3}
+  m_Name: Wheels
+  m_EditorClassIdentifier: 
+  partID: 4
+  partName: Wheels
+  price: 2000
+  type: 2
+  sideViewSprite: {fileID: 9215612904334546265, guid: aacb7c34ade981142babc979b058cacd, type: 3}
+  topDownSprite: {fileID: 0}
