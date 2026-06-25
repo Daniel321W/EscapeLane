@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e50c441bbd1fc844b871f9a51daf420, type: 3}
+  m_Name: FrontBumper
+  m_EditorClassIdentifier: 
+  partID: 3
+  partName: FrontBumper
+  price: 1500
+  type: 1
+  sideViewSprite: {fileID: 21300000, guid: ed0b6c184cccd9248bb5a89b396f8aa4, type: 3}
+  topDownSprite: {fileID: -1366191229432313576, guid: ed2c4aaa44bad5c4caa525b4b7e03dcf, type: 3}
