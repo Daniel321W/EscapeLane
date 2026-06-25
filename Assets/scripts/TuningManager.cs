@@ -5,11 +5,13 @@ public class TuningManager : MonoBehaviour
 {
     [Header("Baza wszystkich części")]
     public TuningPart[] allSpoilers; 
-    public TuningPart[] allWheels;      
-
+    public TuningPart[] allWheels;    
+    public TuningPart[] allBumpers;  
+    
     [Header("Zakładki (Tabs)")]
     public Button tabAeroButton;        
-    public Button tabWheelsButton;      
+    public Button tabWheelsButton;    
+    public Button tabBumperButton;  
 
     [Header("Shop UI Settings")]
     public GameObject shopPanel;        
@@ -22,6 +24,9 @@ public class TuningManager : MonoBehaviour
     public Text actionBottomButtonText; 
 
     private SpriteRenderer currentCarSpoilerPoint;
+    private SpriteRenderer currentCarBumperPoint;
+    private SpriteRenderer currentCarFrontWheelPoint; 
+    private SpriteRenderer currentCarRearWheelPoint;
     private int currentCarID = 0;
     
     private TuningPart currentlySelectedPart = null; 
@@ -42,6 +47,9 @@ public class TuningManager : MonoBehaviour
             
         if(tabWheelsButton != null)
             tabWheelsButton.onClick.AddListener(() => ChangeCategory(1));
+
+        if(tabBumperButton != null)
+            tabBumperButton.onClick.AddListener(() => ChangeCategory(2));
     }
 
     public void ChangeCategory(int newCategoryIndex)
@@ -58,8 +66,17 @@ public class TuningManager : MonoBehaviour
         Transform spoilerTransform = currentCarObject.transform.Find("SpoilerPoint");
         currentCarSpoilerPoint = (spoilerTransform != null) ? spoilerTransform.GetComponent<SpriteRenderer>() : null;
 
-        // TROP 1: Sprawdzamy, na jakie auto faktycznie przełącza się skrypt
-        Debug.LogWarning($"--- ZMIANA AUTA --- Auto ID: {currentCarID} | Nazwa obiektu w grze: {currentCarObject.name} | Czy znaleziono SpoilerPoint?: {currentCarSpoilerPoint != null}");
+        Transform bumperTransform = currentCarObject.transform.Find("FrontBumperPoint");
+        currentCarBumperPoint = (bumperTransform != null) ? bumperTransform.GetComponent<SpriteRenderer>() : null;
+
+        // UWAGA: Szukamy punktów o nazwach "FrontWheelsPoint" i "RearWheelsPoint" - upewnij się, że tak się nazywają w Unity!
+        Transform frontWheelsTransform = currentCarObject.transform.Find("FrontWheelsPoint");
+        currentCarFrontWheelPoint = (frontWheelsTransform != null) ? frontWheelsTransform.GetComponent<SpriteRenderer>() : null;
+
+        Transform rearWheelsTransform = currentCarObject.transform.Find("RearWheelsPoint");
+        currentCarRearWheelPoint = (rearWheelsTransform != null) ? rearWheelsTransform.GetComponent<SpriteRenderer>() : null;
+
+        Debug.LogWarning($"--- ZMIANA AUTA --- Auto ID: {currentCarID} | Nazwa obiektu: {currentCarObject.name} | Spoiler: {currentCarSpoilerPoint != null} | Zderzak: {currentCarBumperPoint != null} | Koła: {currentCarFrontWheelPoint != null}");
 
         LoadTuning();
         CheckCarOwnershipAndToggleShop();
@@ -85,12 +102,16 @@ public class TuningManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        TuningPart[] activeDatabase = (currentCategoryIndex == 0) ? allSpoilers : allWheels;
+        TuningPart[] activeDatabase = null;
+        if (currentCategoryIndex == 0) activeDatabase = allSpoilers;
+        else if (currentCategoryIndex == 1) activeDatabase = allWheels;
+        else if (currentCategoryIndex == 2) activeDatabase = allBumpers;
 
-        if (currentCategoryIndex == 0 && currentCarSpoilerPoint == null)
-        {
-            return; 
-        }
+        if (activeDatabase == null) return;
+
+        if (currentCategoryIndex == 0 && currentCarSpoilerPoint == null) return; 
+        if (currentCategoryIndex == 2 && currentCarBumperPoint == null) return; 
+        if (currentCategoryIndex == 1 && (currentCarFrontWheelPoint == null || currentCarRearWheelPoint == null)) return; 
 
         foreach (TuningPart part in activeDatabase)
         {
@@ -130,9 +151,12 @@ public class TuningManager : MonoBehaviour
         currentlySelectedPart = null;
         if(actionBottomButton != null)
         {
-            if (currentCategoryIndex == 0 && currentCarSpoilerPoint == null)
+            // Zaktualizowano o blokadę dla kół, gdyby auto ich nie miało
+            if ((currentCategoryIndex == 0 && currentCarSpoilerPoint == null) ||
+                (currentCategoryIndex == 1 && (currentCarFrontWheelPoint == null || currentCarRearWheelPoint == null)) ||
+                (currentCategoryIndex == 2 && currentCarBumperPoint == null))
             {
-                actionBottomButtonText.text = "STOCK SPOILER (UNMODIFIABLE)";
+                actionBottomButtonText.text = "NOT AVAILABLE FOR THIS CAR";
                 actionBottomButtonText.color = Color.gray; 
                 actionBottomButton.interactable = false;
             }
@@ -201,35 +225,46 @@ public class TuningManager : MonoBehaviour
     {
         if (currentCategoryIndex == 0) 
         {
-            if (currentCarSpoilerPoint == null) 
-            {
-                Debug.LogError($"BŁĄD ZAPISU: Próbujesz założyć spoiler, ale Auto ID {currentCarID} nie ma SpoilerPoint!");
-                return; 
-            }
+            if (currentCarSpoilerPoint == null) return; 
 
             currentCarSpoilerPoint.sprite = partToEquip.sideViewSprite;
             string saveKey = "Car_" + currentCarID + "_Spoiler_ID";
             PlayerPrefs.SetInt(saveKey, partToEquip.partID);
-            
-            // TROP 2: Sprawdzamy co się zapisuje przy kupnie/wybieraniu
-            Debug.LogWarning($"[ZAPIS] Zakładam i zapisuję spoiler! Auto ID: {currentCarID} | Otrzymuje Spoiler ID: {partToEquip.partID} ({partToEquip.partName}) | Pod kluczem: {saveKey}");
         }
+        // DODANO: Zakładanie Kół (na przód i tył jednocześnie)
         else if (currentCategoryIndex == 1) 
         {
-            Debug.Log("System nakładania kół jeszcze nie jest zaprogramowany!");
+            if (currentCarFrontWheelPoint == null || currentCarRearWheelPoint == null) return;
+
+            currentCarFrontWheelPoint.sprite = partToEquip.sideViewSprite;
+            currentCarRearWheelPoint.sprite = partToEquip.sideViewSprite;
+            
+            string saveKey = "Car_" + currentCarID + "_Wheels_ID";
+            PlayerPrefs.SetInt(saveKey, partToEquip.partID);
+            
+            Debug.LogWarning($"[ZAPIS] Koła zmienione! Auto: {currentCarID} | Koła ID: {partToEquip.partID} | Klucz: {saveKey}");
+        }
+        else if (currentCategoryIndex == 2)
+        {
+            if (currentCarBumperPoint == null) return; 
+
+            currentCarBumperPoint.sprite = partToEquip.sideViewSprite;
+            string saveKey = "Car_" + currentCarID + "_Bumper_ID";
+            PlayerPrefs.SetInt(saveKey, partToEquip.partID);
+            
+            Debug.LogWarning($"[ZAPIS] Zderzak zmieniony! Auto: {currentCarID} | Zderzak ID: {partToEquip.partID} | Klucz: {saveKey}");
         }
 
         PlayerPrefs.Save();
     }
+
     private void LoadTuning()
     {
+        // 1. ŁADOWANIE SPOILERA
         if (currentCarSpoilerPoint != null)
         {
             string saveKey = "Car_" + currentCarID + "_Spoiler_ID";
             int savedSpoilerID = PlayerPrefs.GetInt(saveKey, 0);
-
-            // TROP 3: Co skrypt wyciąga z pamięci po przełączeniu strzałką
-            Debug.LogWarning($"[WCZYTYWANIE] Auto ID: {currentCarID} | Szukam w pamięci klucza: {saveKey} | Wyciągnięta wartość: {savedSpoilerID}");
 
             bool spoilerFound = false;
 
@@ -239,7 +274,6 @@ public class TuningManager : MonoBehaviour
                 {
                     currentCarSpoilerPoint.sprite = part.sideViewSprite;
                     spoilerFound = true;
-                    Debug.LogWarning($"[WCZYTYWANIE] SUKCES! Baza posiada spoiler o ID {savedSpoilerID}. Zmieniam obrazek na na aucie na ten spoiler.");
                     break;
                 }
             }
@@ -247,7 +281,51 @@ public class TuningManager : MonoBehaviour
             if (!spoilerFound || savedSpoilerID == 0)
             {
                 currentCarSpoilerPoint.sprite = null; 
-                Debug.LogWarning($"[WCZYTYWANIE] PUSTO. Wartość to 0 lub nie ma takiego spoilera w bazie. Zdejmuję stary spoiler (czyszczę obrazek).");
+            }
+        } // <--- Tutaj kończy się sprawdzanie spoilera!
+
+        // 2. ŁADOWANIE ZDERZAKA (Wyciągnięte na zewnątrz!)
+        if (currentCarBumperPoint != null)
+        {
+            string saveKeyBumper = "Car_" + currentCarID + "_Bumper_ID";
+            int savedBumperID = PlayerPrefs.GetInt(saveKeyBumper, 0);
+            bool bumperFound = false;
+
+            foreach (TuningPart part in allBumpers)
+            {
+                if (part != null && part.partID == savedBumperID)
+                {
+                    currentCarBumperPoint.sprite = part.sideViewSprite;
+                    bumperFound = true;
+                    break;
+                }
+            }
+            if (!bumperFound || savedBumperID == 0) currentCarBumperPoint.sprite = null; 
+        }
+
+        // 3. DODANO: ŁADOWANIE KÓŁ
+        if (currentCarFrontWheelPoint != null && currentCarRearWheelPoint != null)
+        {
+            string saveKeyWheels = "Car_" + currentCarID + "_Wheels_ID";
+            int savedWheelsID = PlayerPrefs.GetInt(saveKeyWheels, 0);
+            bool wheelsFound = false;
+
+            foreach (TuningPart part in allWheels)
+            {
+                if (part != null && part.partID == savedWheelsID)
+                {
+                    currentCarFrontWheelPoint.sprite = part.sideViewSprite;
+                    currentCarRearWheelPoint.sprite = part.sideViewSprite;
+                    wheelsFound = true;
+                    Debug.LogWarning($"[WCZYTYWANIE] Koła znane! ID: {savedWheelsID} na aucie {currentCarID}.");
+                    break;
+                }
+            }
+            if (!wheelsFound || savedWheelsID == 0) 
+            {
+                // Jeśli nie ma kupionych kół, ściągamy obrazek (powinny być widoczne bazowe koła z rysunku auta)
+                currentCarFrontWheelPoint.sprite = null; 
+                currentCarRearWheelPoint.sprite = null; 
             }
         }
     }

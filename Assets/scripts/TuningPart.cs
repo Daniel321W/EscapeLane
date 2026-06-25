@@ -19,6 +19,6 @@ public class TuningPart : ScriptableObject
 public enum PartType
 {
     Spoiler,
-    FrontBumper, // Przedni zderzak
-    Splitter
+    FrontBumper,
+    Wheels
 }

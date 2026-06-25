@@ -4,6 +4,7 @@ public class GameplayTuningLoader : MonoBehaviour
 {
     [Header("Punkt zaczepienia na aucie (Top-Down)")]
     public SpriteRenderer topSpoilerPoint;
+    public SpriteRenderer FrontBumperPoint;
 
     [Header("Baza wszystkich części")]
     public TuningPart[] allTuningParts; 
@@ -35,6 +36,31 @@ public class GameplayTuningLoader : MonoBehaviour
             if (topSpoilerPoint != null) topSpoilerPoint.sprite = null;
             Debug.LogWarning("[GRA START] Auto nie ma spoilera. Zostawiam czystą klapę.");
             return; 
+        }
+
+        string bumperKey = "Car_" + selectedCarID + "_Bumper_ID"; 
+        int equippedBumperID = PlayerPrefs.GetInt(bumperKey, 0);
+
+        if (equippedBumperID == 0)
+        {
+            if (FrontBumperPoint != null) FrontBumperPoint.sprite = null;
+            Debug.LogWarning("[GRA START] Auto nie ma zderzaka. Zostawiam domyślny przód.");
+        }
+        else
+        {
+            bool bumperFound = false;
+            foreach (TuningPart part in allTuningParts)
+            {
+                if (part != null && part.partID == equippedBumperID)
+                {
+                    // Ważne: nakładamy grafikę z widoku TopDown, a nie SideView!
+                    if (FrontBumperPoint != null) FrontBumperPoint.sprite = part.topDownSprite;
+                    Debug.LogWarning("[GRA START] SUKCES! Nakładam zderzak: " + part.partName);
+                    bumperFound = true;
+                    break; 
+                }
+            }
+            if (!bumperFound) Debug.LogError($"[GRA START] BŁĄD: Brak zderzaka ID {equippedBumperID} w liście All Tuning Parts!");
         }
 
         // 5. Przeszukujemy naszą bazę w poszukiwaniu założonej części
