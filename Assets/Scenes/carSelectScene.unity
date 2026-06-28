@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SPOILERY
+  m_Text: SPOILERS
 --- !u!222 &10137000
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3630,7 +3630,7 @@ GameObject:
   - component: {fileID: 1326121057}
   - component: {fileID: 1326121056}
   m_Layer: 5
-  m_Name: Tab_Aero
+  m_Name: Tab_Spoilers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
