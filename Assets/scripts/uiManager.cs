@@ -5,6 +5,33 @@ using TMPro;
 
 public class uiManager : MonoBehaviour
 {
+
+    [Header("Near Miss UI")]
+    public Text nearMissText; // Tylko jeden obiekt tekstu!
+
+    public void ShowNearMissText(float multiplier)
+    {
+        if (nearMissText != null)
+        {
+            // Włączamy tekst
+            nearMissText.gameObject.SetActive(true);
+            
+            // Formatujemy napis, np.: "NEAR MISS! x2.0"
+            nearMissText.text = "NEAR MISS! x" + multiplier.ToString("F1"); 
+            
+            // Zniknie po 1.5 sekundy
+            CancelInvoke(nameof(HideNearMissText)); 
+            Invoke(nameof(HideNearMissText), 1.5f);
+        }
+    }
+
+    private void HideNearMissText()
+    {
+        if (nearMissText != null)
+        {
+            nearMissText.gameObject.SetActive(false);
+        }
+    }
     public Button[] buttons;
     public Text scoreText;
 
@@ -43,6 +70,15 @@ public class uiManager : MonoBehaviour
         if (!_gameOver)
         {
             _score += Mathf.RoundToInt(1 * scoreMultiplier);
+        }
+    }
+
+    // DODAJ TĘ FUNKCJĘ DO SWOJEGO uiManager:
+    public void AddScore(int pointsToAdd)
+    {
+        if (!_gameOver)
+        {
+            _score += pointsToAdd;
         }
     }
 
