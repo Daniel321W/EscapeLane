@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RandomGameplayMusic : MonoBehaviour
 {
-    public AudioClip[] gameplayTracks; // wrzucasz tutaj utwory w Inspectorze
+    public AudioClip[] gameplayTracks; 
     private AudioSource audioSource;
 
     void Start()
@@ -11,9 +11,19 @@ public class RandomGameplayMusic : MonoBehaviour
 
         if (gameplayTracks.Length > 0)
         {
+            // Losowanie piosenki
             int randomIndex = Random.Range(0, gameplayTracks.Length);
-            audioSource.clip = gameplayTracks[randomIndex];
+            AudioClip selectedClip = gameplayTracks[randomIndex];
+
+            audioSource.clip = selectedClip;
             audioSource.Play();
+
+            // SZUKANIE UI I WYŚWIETLANIE POPUPU
+            uiManager uiMan = FindObjectOfType<uiManager>();
+            if (uiMan != null)
+            {
+                uiMan.ShowSongPopup(selectedClip.name);
+            }
         }
     }
 }

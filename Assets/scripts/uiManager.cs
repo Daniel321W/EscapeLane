@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -6,8 +6,36 @@ using TMPro;
 public class uiManager : MonoBehaviour
 {
 
+
     [Header("Near Miss UI")]
     public Text nearMissText; // Tylko jeden obiekt tekstu!
+
+    public GameObject songPopupPanel; // Twój obrazek SD.jpg (Tło)
+    public Text songNameText;         // Tekst z nazwą piosenki
+
+    public void ShowSongPopup(string songName)
+    {
+        if (songPopupPanel != null && songNameText != null)
+        {
+            // Włączamy panel z grafiką
+            songPopupPanel.SetActive(true);
+            
+            // Ustawiamy tekst (zmieniamy nazwę pliku z Unity na ładny napis)
+            songNameText.text = "♫ " + songName;
+            
+            // Zniknie po 3 sekundach
+            CancelInvoke(nameof(HideSongPopup)); 
+            Invoke(nameof(HideSongPopup), 3.0f);
+        }
+    }
+
+    private void HideSongPopup()
+    {
+        if (songPopupPanel != null)
+        {
+            songPopupPanel.SetActive(false);
+        }
+    }
 
     public void ShowNearMissText(float multiplier)
     {
@@ -17,7 +45,7 @@ public class uiManager : MonoBehaviour
             nearMissText.gameObject.SetActive(true);
             
             // Formatujemy napis, np.: "NEAR MISS! x2.0"
-            nearMissText.text = "NEAR MISS! x" + multiplier.ToString("F1"); 
+            nearMissText.text = "NEAR MISS x" + multiplier.ToString("F1"); 
             
             // Zniknie po 1.5 sekundy
             CancelInvoke(nameof(HideNearMissText)); 

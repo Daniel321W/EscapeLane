@@ -67,12 +67,17 @@ public class MenuMusicController : MonoBehaviour
     {
         if (menuSongs.Length == 0) return; 
 
-        
         int randomIndex = Random.Range(0, menuSongs.Length);
+        AudioClip selectedClip = menuSongs[randomIndex];
         
-        
-        _source.clip = menuSongs[randomIndex];
+        _source.clip = selectedClip;
         _source.Play();
+
+        uiManager uiMan = FindObjectOfType<uiManager>();
+        if (uiMan != null)
+        {
+            uiMan.ShowSongPopup(selectedClip.name);
+        }
     }
 
     private bool IsSceneAllowed(string sceneName)
