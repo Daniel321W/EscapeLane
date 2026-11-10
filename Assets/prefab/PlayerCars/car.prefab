@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 926069475469631069}
   - component: {fileID: 6460529655733678722}
   - component: {fileID: 3933652095634988431}
+  - component: {fileID: -2533061273387751759}
   m_Layer: 0
   m_Name: car
   m_TagString: Player
@@ -435,6 +436,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basePoints: 10
+--- !u!114 &-2533061273387751759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212141534709957087}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac7d48174ccccd4e8194355c3bbb26b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBotActive: 1
+  sightDistance: 7
+  blindSpotDistance: 2.5
 --- !u!1 &2979385234251839220
 GameObject:
   m_ObjectHideFlags: 0

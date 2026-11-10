@@ -68,7 +68,7 @@ public class carControler : MonoBehaviour
     // --- KOLIZJE ---
     // Mimo że sterujemy pozycją, OnCollisionEnter2D nadal zadziała, 
     // dopóki obiekt ma Rigidbody i Collider.
-    private void OnCollisionEnter2D(Collision2D collision)
+   private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyCar"))
         {
@@ -78,6 +78,14 @@ public class carControler : MonoBehaviour
             }
             else
             {
+                // NOWE: Zapisujemy zgon do PlayerPrefs (max 5 zgonów w pamięci)
+                int recentDeaths = PlayerPrefs.GetInt("RecentDeaths", 0);
+                if (recentDeaths < 5) 
+                {
+                    PlayerPrefs.SetInt("RecentDeaths", recentDeaths + 1);
+                    PlayerPrefs.Save();
+                }
+
                 Destroy(gameObject);
                 if (ui != null)
                     ui.gameOverActivated();

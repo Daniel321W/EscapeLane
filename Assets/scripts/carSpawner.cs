@@ -63,7 +63,10 @@ public class carSpawner : MonoBehaviour
         if (_timer <= 0f)
         {
             SpawnCar();
-            _timer = delayTimer;
+            
+            // NOWE: Spawner mnoży swój bazowy czas (delayTimer) przez modyfikator z systemu AI.
+            // Jeśli gracz gra świetnie, mnożnik wynosi np. 0.6, więc wrogowie pojawiają się szybciej!
+            _timer = delayTimer * FuzzyInferenceEngine.CurrentSpawnRateMod;
         }
     }
 

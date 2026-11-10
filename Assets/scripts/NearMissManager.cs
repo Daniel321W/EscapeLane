@@ -49,6 +49,11 @@ public class NearMissManager : MonoBehaviour
                 uiMan.AddScore(totalReward);
                 uiMan.ShowNearMissText(finalMultiplier); // <--- Zaktualizowana nazwa
             }
+            // Wysłanie danych do mózgu AI z logiką rozmytą!
+            if (FuzzyInferenceEngine.Instance != null)
+            {
+                FuzzyInferenceEngine.Instance.RegisterNearMiss(finalMultiplier);
+            }
 
             activeNearMisses.Remove(enemy);
         }

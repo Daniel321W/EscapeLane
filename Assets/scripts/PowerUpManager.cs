@@ -41,6 +41,12 @@ public class PowerUpManager : MonoBehaviour
 
     public void ActivatePowerUp(PowerUpType type)
     {
+        // NOWE: Informujemy SI o zebranym power-upie
+        if (FuzzyInferenceEngine.Instance != null)
+        {
+            FuzzyInferenceEngine.Instance.RegisterPowerUp();
+        }
+
         StartCoroutine(PowerUpRoutine(type));
     }
 

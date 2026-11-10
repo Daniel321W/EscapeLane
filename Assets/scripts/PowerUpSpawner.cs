@@ -20,28 +20,33 @@ public class PowerUpSpawner : MonoBehaviour
     {
         while (true)
         {
-            float waitTime = Random.Range(minSpawnTime, maxSpawnTime);
-            yield return new WaitForSeconds(waitTime);
-
-            if (powerUpPrefabs.Length == 0)
+            // ZABEZPIECZENIE przed pustą tablicą
+            if (powerUpPrefabs == null || powerUpPrefabs.Length == 0)
             {
-                Debug.LogWarning("Brak power-upów do spawnowania!");
-                yield break; // Przerywa coroutine jeśli brak prefabów
+                yield return new WaitForSeconds(1f);
+                continue;
             }
+
+            // NOWE: Pobieramy modyfikator z systemu SI.
+            float aiModifier = 1.0f;
+            if (FuzzyInferenceEngine.Instance != null)
+            {
+                aiModifier = FuzzyInferenceEngine.CurrentPowerUpSpawnMod;
+            }
+
+            // Czas oczekiwania jest teraz mnożony przez decyzję SI!
+            float waitTime = Random.Range(minSpawnTime, maxSpawnTime) * aiModifier;
+            yield return new WaitForSeconds(waitTime);
 
             int randomIndex = Random.Range(0, powerUpPrefabs.Length);
             GameObject prefabToSpawn = powerUpPrefabs[randomIndex];
 
-            if (prefabToSpawn == null)
+            if (prefabToSpawn != null)
             {
-                Debug.LogWarning("Prefab power-upa jest null na indeksie: " + randomIndex);
-                continue; // Pomija ten spawn i czeka do następnego
+                float randomX = Random.Range(xMin, xMax);
+                Vector3 spawnPosition = new Vector3(randomX, spawnY, 0f);
+                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
             }
-
-            float randomX = Random.Range(xMin, xMax);
-            Vector3 spawnPosition = new Vector3(randomX, spawnY, 0f);
-
-            Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
         }
     }
 }
